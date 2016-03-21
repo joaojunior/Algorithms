@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void insert_sort(int *numbers, const int QUANTITY){
     int i, value;
@@ -20,7 +21,10 @@ void print_vector(int *numbers, const int QUANTITY){
 
 int main(){
     const int LEN = 5;
-    int numbers[5] = {5, 4, 3, 2, 1};
+    int *numbers;
+    numbers = (int *) malloc(LEN * sizeof(int));
+    for(int i = 0; i < LEN; i++)
+        numbers[i] = 5 - i;
     insert_sort(numbers, LEN); 
     print_vector(numbers, LEN);
     return 0;
