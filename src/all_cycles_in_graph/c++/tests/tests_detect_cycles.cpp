@@ -1,6 +1,12 @@
 #include <gtest/gtest.h>
 #include "../detect_cycles.h"
 
-TEST(SquareRootTest, PositiveNos) {
-    EXPECT_EQ (18.0, square_root(324.0));
+TEST(DetectCyclesTest, GraphWithoutArcs) {
+    Graph graph;
+    graph.add_node(0);
+    graph.add_node(1);
+    DetectCycle detect_cycle;
+    detect_cycle.run(graph);
+    EXPECT_EQ (detect_cycle.BLACK, detect_cycle.colors.find(0)->second);
+    EXPECT_EQ (detect_cycle.BLACK, detect_cycle.colors.find(1)->second);
 }
