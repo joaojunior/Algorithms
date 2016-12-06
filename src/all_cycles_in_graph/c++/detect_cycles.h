@@ -26,7 +26,7 @@ class DetectCycle{
         const int WHITE=2;
         void run(Graph);
         void dfs(Graph, int);
-        bool has_cycle();
+        int number_cycles();
 };
 
 #endif

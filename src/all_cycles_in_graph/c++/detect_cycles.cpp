@@ -33,13 +33,12 @@ void DetectCycle::dfs (Graph graph, int source){
             dfs(graph, destination);
         else{
             cycles.push_back(path);
+            path.clear();
         }
     }
     colors[source] = BLACK;
 }
 
-bool DetectCycle::has_cycle(){
-    if(cycles.size() > 0)
-       return true;
-    return false; 
+int DetectCycle::number_cycles(){
+    return cycles.size();
 }
