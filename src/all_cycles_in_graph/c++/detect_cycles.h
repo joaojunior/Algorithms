@@ -16,8 +16,8 @@ class DetectCycle{
         const int BLACK=0;
         const int GREY=1;
         const int WHITE=2;
-        void run(Graph);
-        void dfs(Graph, int);
+        void run(Graph *);
+        void dfs(Graph *, int);
         int number_cycles();
 };
 

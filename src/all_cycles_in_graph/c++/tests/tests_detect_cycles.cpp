@@ -7,7 +7,7 @@ TEST(DetectCyclesTest, GraphWithoutArcs) {
     graph.add_node(0);
     graph.add_node(1);
     DetectCycle detect_cycle;
-    detect_cycle.run(graph);
+    detect_cycle.run(&graph);
     EXPECT_EQ(detect_cycle.BLACK, detect_cycle.colors.find(0)->second);
     EXPECT_EQ(detect_cycle.BLACK, detect_cycle.colors.find(1)->second);
     ASSERT_EQ(0, detect_cycle.number_cycles());
@@ -24,7 +24,7 @@ TEST(DetectCyclesTest, GraphWithOneCycle) {
     expected.push_back(cycle);
 
     DetectCycle detect_cycle;
-    detect_cycle.run(graph);
+    detect_cycle.run(&graph);
     EXPECT_EQ(detect_cycle.BLACK, detect_cycle.colors.find(0)->second);
     EXPECT_EQ(detect_cycle.BLACK, detect_cycle.colors.find(1)->second);
     ASSERT_EQ(1, detect_cycle.number_cycles());
@@ -52,7 +52,7 @@ TEST(DetectCyclesTest, GraphWithTwoCycle) {
     expected.push_back(cycle);
 
     DetectCycle detect_cycle;
-    detect_cycle.run(graph);
+    detect_cycle.run(&graph);
     EXPECT_EQ(detect_cycle.BLACK, detect_cycle.colors.find(0)->second);
     EXPECT_EQ(detect_cycle.BLACK, detect_cycle.colors.find(1)->second);
     EXPECT_EQ(detect_cycle.BLACK, detect_cycle.colors.find(2)->second);
