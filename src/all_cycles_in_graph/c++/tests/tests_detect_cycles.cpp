@@ -1,4 +1,5 @@
 #include <gtest/gtest.h>
+#include "../graph.h"
 #include "../detect_cycles.h"
 
 TEST(DetectCyclesTest, GraphWithoutArcs) {
