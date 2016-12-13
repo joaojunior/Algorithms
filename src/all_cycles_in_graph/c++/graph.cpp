@@ -9,3 +9,14 @@ void Graph::add_arc(int source, int destination){
 void Graph::add_node(int node){
     nodes.insert(node);
 }
+
+void Graph::clear(){
+    arcs.clear();
+    nodes.clear();
+}
+
+void Graph::print(){
+    for(auto source: arcs)
+        for(auto destination: source.second)
+            cout << source.first << "--" << destination << ",";
+}

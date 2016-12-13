@@ -2,7 +2,7 @@ CC=g++
 VERSION=c++11
 CFLAGS=@conanbuildinfo.gcc
 DEPS = detect_cycles.h
-OBJ = tests/tests_detect_cycles.o graph.o detect_cycles.o
+OBJ = tests/tests_detect_cycles.o tests/tests_dfs.o graph.o detect_cycles.o dfs.o
 
 conan:
 	conan install
