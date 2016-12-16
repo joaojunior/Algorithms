@@ -9,6 +9,7 @@ void DFS::run(Graph *graph){
     time = 0;
     for(auto node : graph->nodes){
         if(colors[node] == WHITE){
+            path.clear();
             dfs(graph, node);
         }
    }
@@ -19,9 +20,13 @@ void DFS::dfs(Graph *graph, int source){
     time_start[source] = time;
     colors[source] = GREY;
     for(auto destination: graph->arcs[source]){
+        path[source] = destination;
         if(colors[destination] == WHITE){
             predecessor[destination] = source;
             dfs(graph, destination);
+        } else if(colors[destination] == GREY){
+            cycles.push_back(path);
+            path.clear();
         }
     }
     colors[source] = BLACK;
@@ -32,6 +37,7 @@ void DFS::dfs(Graph *graph, int source){
 }
 
 void DFS::clear(){
+    cycles.clear();
     colors.clear();
     time_start.clear();
     time_close.clear();

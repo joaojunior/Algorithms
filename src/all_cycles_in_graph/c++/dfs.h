@@ -7,6 +7,7 @@
 #include "graph.h"
 
 class DFS{
+    map<int, int> path;
     public:
         const int BLACK=0;
         const int GREY=1;
@@ -15,6 +16,7 @@ class DFS{
         map<int, int> time_start;
         map<int, int> time_close;
         map<int, int> predecessor;
+        list<map<int, int> > cycles;
         int time;
         void run(Graph *);
         void dfs(Graph *, int);
