@@ -1,0 +1,5 @@
+*.o
+*.swp
+*.pyc
+conanbuildinfo.gcc
+conaninfo.txt
