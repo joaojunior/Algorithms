@@ -4,7 +4,7 @@
 #include <list>
 #include <map>
 
-#include "graph.h"
+#include <graph.h>
 #include "dfs.h"
 
 using namespace std;
