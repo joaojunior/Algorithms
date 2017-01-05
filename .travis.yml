@@ -13,6 +13,4 @@ install:
 - sudo pip install gcovr
 script:
 - make run_tests
-- gcovr -r src/algorithms/all_cycles_in_graph/c++ -e tests
-- ls src/algorithms/all_cycles_in_graph/c++
-- gcov
+- gcovr -v -r . -e tests
