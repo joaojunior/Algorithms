@@ -8,7 +8,7 @@ GRAPH = ../../../data_structures/graph/c++
 INCLUDE=-I$(GRAPH)
 
 conan:
-	conan install -s compiler=gcc
+	conan install -s compiler=gcc -s compiler.libcxx=libstdc++
 
 %.o: %.cpp $(DEPS) conan
 		$(CC) -std=$(VERSION) -c -o $@ $< $(INCLUDE) $(CFLAGS)
