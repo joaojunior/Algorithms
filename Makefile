@@ -7,3 +7,6 @@ clean:
 
 run_tests:
 	make run_tests --directory src/algorithms/all_cycles_in_graph/c++
+
+verify_quality:
+	cppcheck .
