@@ -8,9 +8,9 @@ clean:
 	find . -name "*.gcno" -type f -delete
 	find . -name "*run_tests" -type f -delete
 
-run_tests:
-	make run_tests --directory src/algorithms/all_cycles_in_graph/c++
-	gcovr -r . -e tests$
-
 verify_quality:
 	cppcheck .
+
+run_tests: clean verify_quality
+	make run_tests --directory src/algorithms/all_cycles_in_graph/c++
+	gcovr -r . -e tests$

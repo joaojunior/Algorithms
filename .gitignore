@@ -3,3 +3,6 @@
 *.pyc
 conanbuildinfo.gcc
 conaninfo.txt
+*.gcda
+*.gcno
+run_tests
