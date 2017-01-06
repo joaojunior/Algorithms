@@ -8,6 +8,8 @@ install:
 - sudo apt-get install -qq g++-4.9
 - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.9
 - sudo apt-get install cppcheck
+- sudo apt-get install ggcov
+- sudo ln -sf /usr/bin/gcov-4.9 /usr/bin/gcov
 # # Install conan
 - sudo pip install conan
 - sudo pip install gcovr
