@@ -15,4 +15,3 @@ install:
 - sudo pip install gcovr
 script:
 - make run_tests
-- gcovr -v -r . -e tests
