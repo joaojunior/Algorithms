@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/joaojunior/phd.svg?token=MmMdiU82MSqxe9yJ4RQc&branch=master)](https://travis-ci.com/joaojunior/phd)
 # Introduction
 This repo have many algorithms and data structure. Many of algorithms and data structure here can be found
 in the book [Introduction to Algorithms](https://mitpress.mit.edu/books/introduction-algorithms).
