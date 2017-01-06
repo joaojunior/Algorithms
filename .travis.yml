@@ -12,8 +12,8 @@ install:
 # # Install conan
 - sudo pip install conan
 - sudo pip install gcovr
-- sudo pip install coveralls
+- pip install --user cpp-coveralls
 script:
 - make run_tests
 after_success:
-- coveralls
+- /home/travis/.local/bin/coveralls --exclude lib --exclude tests --exclude graph --gcov-options '\-lp' 
