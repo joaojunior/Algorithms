@@ -17,4 +17,4 @@ install:
 script:
 - make run_tests
 after_success:
-- coveralls --exclude lib --exclude tests --gcov-options '\-lp'
+- coveralls --exclude lib --exclude tests --exclude graph --gcov-options '\-lp'
